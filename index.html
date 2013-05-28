@@ -20,29 +20,80 @@
 		<script type="text/javascript" src="js/cordova.js"></script>
 		<!-- <script type="text/javascript" src="js/barcodescanner.js"></script>
 		<script type="text/javascript" src="js/childbrowser.js"></script>-->
+		<style type="text/css">
+			#logo {
+			    background:url(img/logo.png) no-repeat center top; /* 170px x 200px */
+			    position:relative;
+			    left:50%;
+    			top:50%;
+    			height:60px;                   /* text area height */
+			    width:225px;                   /* text area width */
+			    text-align:center;
+			    padding:110px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+			    margin:-10px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+			}
+			@media all and (max-width: 35em) {
+			    .my-breakpoint .ui-block-a, 
+			    .my-breakpoint .ui-block-b, 
+			    .my-breakpoint .ui-block-c,
+			    .my-breakpoint .ui-block-d,
+			    .my-breakpoint .ui-block-e { 
+			        width: 100%; 
+			        float:none; 
+			    }
+			}
+		</style>
 	</head>
 	<body>
 		<div data-role="page" id="firts-page">
+			<div data-role="panel" id="mypanel" data-theme="a">
+			    <ul data-role="listview" data-icon="false">
+			    	<li data-role="list-divider" data-theme="a">Menu App</li>
+			    	<li>
+			    		<a href="#" data-theme="b">Item 1</a>
+			    	</li>
+			    	<li>
+			    		<a href="#" data-theme="b">Item 2</a>
+			    	</li>
+			    	<li>
+			    		<a href="#" data-theme="b">Item 3</a>
+			    	</li>
+			    	<li>
+			    		<a href="#" data-theme="b">Item 4</a>
+			    	</li>
+			    	<li>
+			    		<a href="#" data-theme="b">Item 5</a>
+			    	</li>
+			    </ul>
+			</div><!-- /panel -->
 			<div data-role="header" data-position="fixed">
+				<a href="#mypanel" data-theme="a" data-icon="bars" data-shadow="true" data-iconpos="notext">MENU</a>
 				<h1 class="ui-title" aria-level="1">GuardDroid App</h1>
 			</div>
-			<div data-role="content" data-theme="b" style="height: 350px;">
-				<form action="">
-		            <div data-role="fieldcontain">
-		                <label for="name_user">
-		                    Nombre de Usuario
-		                </label>
-		                <input name="name_user" id="name_user" placeholder="Ingrese Nombre de Usuario"
-		                value="" type="text">
-		            </div>
-		            <div data-role="fieldcontain">
-		                <label for="contrasenna">
-		                    Contraseña
-		                </label>
-		                <input name="contrasenna" id="contrasenna" placeholder="Ingrese Contraseña"
-		                value="" type="password">
-		            </div>
-		        </form>
+			<div data-role="content" data-theme="b" style="max-height:100%;">
+				<div class="ui-grid-a my-breakpoint">
+				    <div class="ui-block-a">
+				    	<div id="logo"></div>				    	
+				    </div>
+				    <div class="ui-block-b">
+				    	<form action="">
+				            <div data-role="fieldcontain">
+				                <label for="name_user">
+				                    Nombre de Usuario
+				                </label>
+				                <input name="name_user" id="name_user" placeholder="Ingrese Nombre de Usuario"
+				                value="" type="text">
+				            </div>
+				            <div data-role="fieldcontain">
+				                <label for="contrasenna">
+				                    Contraseña
+				                </label>
+				                <input name="contrasenna" id="contrasenna" placeholder="Ingrese Contraseña"
+				                value="" type="password">
+				            </div>
+				        </form>
+				    </div>
+				</div><!-- /grid-a -->
 			</div>
 			<div data-role="footer" data-position="fixed" class="ui-footer ui-bar-a ui-footer-fixed slideup" role="contentinfo">
 				<div data-role="navbar" class="ui-navbar ui-mini" role="navigation">
