@@ -71,12 +71,21 @@
 			<div data-role="panel" data-position-fixed="true" id="mypanel" data-theme="a">
 			    <ul data-role="listview" data-divider-theme="d" data-icon="false" data-filter="false">
 			    	<li data-icon="delete" data-theme="b"><a href="#" data-rel="close">Men&uacute;</a></li>
-		            <li><a href="#">Accept</a></li>
-		            <li><a href="#">Back</a></li>
-		            <li><a href="#">Cancel</a></li>
+		            <li><a href="#info" data-rel="dialog" data-transition="pop">Informaci&oacute;n</a></li>
 		        </ul>
 			</div>
-		</div>		
+		</div>
+		<div data-role="dialog" id="info">
+			<div data-role="header" data-theme="d">
+				<h1>Informaci&oacute;n</h1>
+			</div>
+			<div data-role="content">
+				<h1>Delete page?</h1>
+				<p>This is a regular page, styled as a dialog. To create a dialog, just link to a normal page and include a transition and <code>data-rel="dialog"</code> attribute.</p>
+				<a href="#" data-role="button" data-rel="back" data-theme="b">Sounds good</a>       
+				<a href="#" data-role="button" data-rel="back" data-theme="c">Cancel</a>    
+			</div>
+		</div>
 		<!--script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript">
 		app.initialize();
